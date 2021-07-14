@@ -13,12 +13,12 @@ body {
 }
 
 .big-holder {
-    max-width: 1200px;
+    max-width: 95%;
     margin: 0 auto;
 }
 
 .mid-holder {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -36,6 +36,11 @@ h1 {
     padding: 1rem;
 }
 
+h2 {
+    font-size: 2rem;
+    
+}
+
 .foo-bar {
     background: #D1891C;
 }
@@ -43,6 +48,45 @@ h1 {
 .foo-bar p {
     margin: 0 auto;
     padding: 0.3rem;
+}
+
+.header-bot {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+.header-bot nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    display: inline-block;
+    position: relative;
+    padding: 0.2rem 0rem;
+    margin: 0rem 0.2rem;
+    color: white;
+    text-decoration: none;
+
+
+}
+
+
+li a::before {
+    content: '';
+    position: absolute;
+    top: 1.3rem;
+    width: 0px;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+li a:hover::before {
+    width: 100%;
 }
 
 /* MAIN */
@@ -57,7 +101,7 @@ h1 {
 .flotante {
     color: white;
     position: fixed;
-    padding: 1%;
+    padding: 0.6rem;
     background-color: #00669F;
     border-radius: 50%;
     right: 5%;
@@ -65,13 +109,19 @@ h1 {
     text-align: center;
     font-family: 'Font Awesome 5 Free';
     font-weight: 700;
-    font-size: 25px;
+    font-size: 2rem;
 }
+.flotante:hover {
+    background-color: black;
+}
+
+
 
 /* CARD */
 
 .card {
-    max-width: 300px;
+    max-width: 40%;
+    min-width: 290px;
     margin: 1rem;
 }
 
@@ -107,50 +157,54 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 35vh;
 }
 
 .hero-name {
     font-family: Roboto;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-style: normal;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
+    padding: 1rem;
 }
 
 .card-text p {
-    font-family: Roboto;
-    font-size: 1em;
+    font-family: 'Roboto';
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     text-align: justify;
     margin: 1rem;
 }
 
-.card-text a {
+.card-link a {
+    display: inline-block;
+    padding: 1rem 3rem;
     background: #00669F;
     border-radius: 0.3rem;
     color: white;
-    display: inline-block;
-    padding: 1rem 3rem;
+   
     text-decoration: none;
     margin: 1rem auto;
 }
 
 .batman {
-    background-image: url('../img/batman-background.png');
+    background-image: url('../img/batman-background.svg');
 }
 
 .mujer-maravilla {
-    background-image: url('../img/fondo-mm.png');
+    background-image: url('../img/fondo-mm.svg');
 }
 
 .superman {
-    background-image: url('../img/fondo-sm.png');
+    background-image: url('../img/fondo-sm.svg');
 }
 
 .harley {
-    background-image: url('../img/fondo-hq.png');
+    background-image: url('../img/fondo-hq.svg');
 }
 
 /*FOOTER*/
@@ -162,5 +216,11 @@ footer {
 footer p {
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 1rem;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
 }

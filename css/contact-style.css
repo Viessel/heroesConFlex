@@ -1,0 +1,9 @@
+.formulario {
+    margin: 3rem auto;
+}
+.formulario form{
+    display: flex;
+    flex-direction: column;
+
+    width: 40%;
+}
